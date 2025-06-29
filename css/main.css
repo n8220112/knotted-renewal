@@ -2525,18 +2525,6 @@ main .instagram .instagram-wrap .instagramSwiper .instagram-slide-wrapper .insta
      object-fit: cover;
   border-radius: 10px;
 }
-.storelist-section .storelist-main .iw_inner {
-  padding: 20px;
-  font-family: "Pretendard", sans-serif;
-  color: #3C3C3C;
-}
-.storelist-section .storelist-main .iw_inner h3 {
-  font-size: 1.29rem;
-  color: #EE9DC2;
-}
-.storelist-section .storelist-main .iw_inner p {
-  font-size: 1rem;
-}
 .storelist-section #map {
   width: 90%;
   margin: auto;
@@ -2721,6 +2709,19 @@ main .instagram .instagram-wrap .instagramSwiper .instagram-slide-wrapper .insta
 #storeModal .modal-content table .feature-list span {
   margin-right: 10px;
   color: #717171;
+}
+.iw_inner {
+  padding: 5px;
+  font-family: "Pretendard", sans-serif;
+  color: #3C3C3C;
+}
+.iw_inner h3 {
+  font-size: 1.29rem;
+  color: #EE9DC2;
+}
+.iw_inner p {
+  font-size: 1rem;
+  color: #898989;
 }
 
 section.login-section {
