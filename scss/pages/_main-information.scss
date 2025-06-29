@@ -1,0 +1,78 @@
+main {
+    .information {
+        h1 {
+            font-size: $title;
+            text-align: center;
+            margin: $margin60;
+        }
+        .information-wrap {
+            padding: $padding20;
+            display: flex;
+            flex-direction: column;
+            gap: $margin40;
+            align-items: center;
+            .information-item:nth-child(2) {
+                align-self: end;
+            }
+            .information-item:nth-child(3) {
+                align-self: start;
+            }
+            .information-item {
+                .information-image {
+                    display: block;
+                    position: relative;
+                    @at-root .border-image {
+                        border-radius: 210px 210px 0 0;
+                        overflow: hidden;
+                    }
+                    span {
+                        display: block;
+                        width: 420px;
+                        height: 420px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .information-icon {
+                        position: absolute;
+                        display: block;
+                        bottom: -25px;
+                        right: 10px;
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid $dim-black;
+                        border-radius: 50%;
+                        transition: .3s;
+                        svg {
+                            color: $dim-black;
+                            position: absolute;
+                            width: 22px;
+                            height: 22px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                .information-text {
+                    h4 {
+                        margin: 10px 0;
+                        a {
+                            font-size: $subtitle-small;
+                            font-weight: 600;
+                        }
+                    }
+                    h5 {
+                        font-size: $body-title;
+                        font-weight: 400;
+                        color: $silver-black;
+                        line-height: 120%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+
+/* faq */
+.faq-section{
+    padding: $padding20;
+    .faq-wrap{
+        .faq-title{
+            margin: $margin60;
+            h3{
+                font-size: $subtitle;
+                text-align: center;
+            }
+        }
+        .faq-content{
+            border-top: $line-silver;
+            .faq-group{
+                border-bottom: $line-silver;
+                padding: 10px;
+                cursor: pointer;
+                .faq-question{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    display: flex; align-items: center;
+                    margin: 10px 0 0;
+                    span{
+                        margin-right: 10px;
+                        font-family: $primary-en;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                    }
+                    i{
+                        color: $light-black;
+                        margin-left: auto;
+                    }
+                }
+                .faq-answer{
+                    display: flex;
+                    margin: 5px;
+                    max-height: 0;
+                    overflow: hidden;
+                    span{
+                        margin-right: 10px;
+                        font-family: $primary-en;
+                    }
+                }
+                &.active{
+                    .faq-question{
+                        i{
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .faq-answer{
+                        max-height: max-content;
+                        margin: $margin20;
+                    }
+                }
+            }
+        }
+        .pagination{
+            margin: $margin40;
+            display: flex; align-items: center; justify-content: center;
+            a{
+                color: $dark-gray;
+                padding: 10px;
+                cursor: pointer;
+                &.active{
+                    color: $main-black;
+                }
+            }
+        }
+    }
+}

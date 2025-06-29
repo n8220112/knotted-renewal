@@ -1,0 +1,53 @@
+main {
+    .instagram {
+        text-align: center;
+
+        h1 {
+            font-size: $title;
+            margin: $margin60;
+        }
+
+        .instagram-wrap {
+            .instagramSwiper {
+                margin: $margin40;
+
+                .instagram-slide-wrapper {
+                    .instagram-slide {
+                        width: 320px;
+                        text-align: center;
+
+                        .border-image {
+                            width: 100%;
+                            height: 380px;
+                            display: block;
+                            margin-bottom: 20px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        h5 {
+                            margin: $margin20;
+
+                            a {
+                                font-family: $primary-en, $primary-kr;
+                                font-size: $body-title;
+                                font-weight: 400;
+                            }
+                        }
+
+                        p {
+                            font-size: $body;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            a.btn {}
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.storelist-section {
+   margin: $margin40;
+   .storelist-title {
+      margin: $margin20;
+      text-align: center;
+      color: $point-color;
+      .subtitle {
+         font-size: $subtitle;
+         color: $point-color;
+      }
+      .storelist-title-bottom {
+         font-size: $txt;
+         margin: 10px 0 30px;
+         span {
+            font-weight: 700;
+            font-size: $body;
+         }
+         p {
+            color: $silver-black;
+         }
+      }
+      .storelist-title-top {
+         width: max-content;
+         display: block;
+         padding: 5px 15px;
+         background-color: $dim-gray;
+         font-size: $txt;
+         color: $dim-black;
+         margin: 20px auto 10px;
+         border-radius: 10px;
+      }
+   }
+   .storelist-main {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      img {
+         width: 100%;
+         object-fit: cover;
+         border-radius: 10px;
+      }
+      .iw_inner {
+         padding: 20px;
+         font-family: $primary-kr;
+         color: $dim-black;
+         h3 {
+            font-size: $body-title;
+            color: $point-color;
+         }
+         p {
+            font-size: $body;
+         }
+      }
+   }
+   #map {
+      width: 90%;
+      margin: auto;
+      height: 300px;
+   }
+   .storelist-btnwrap {
+      margin: $margin20;
+      text-align: center;
+      padding: $padding20;
+      .storelist-search {
+         #searchInput {
+            width: 85%;
+            border: 1px solid $dark-gray;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: $body;
+            &::placeholder {
+               padding-left: 5px;
+               font-size: $body;
+            }
+            /* X 버튼 및 검색 결과 버튼 숨기기 */
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button {
+               display: none;
+            }
+         }
+      }
+   }
+   .storelist-wrap {
+      padding: $padding20;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      .store-card {
+         text-align: center;
+         display: block;
+         overflow: hidden;
+         border-radius: 10px;
+         border: 1px solid $silver-gray;
+         cursor: pointer;
+         .card-imgbox {
+            width: 100%;
+            height: 140px;
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         .card-textbox {
+            padding: 10px;
+            h4,
+            p {
+               letter-spacing: -1px;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+            h4 {
+               font-weight: 800;
+               font-size: $body;
+               color: $dim-black;
+            }
+            p {
+               font-size: $txt;
+               color: $point-color;
+               font-weight: 500;
+            }
+         }
+      }
+   }
+}
+#storeModal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+   z-index: 99999;
+   .modal-content {
+      background: #fff;
+      padding: 40px 0;
+      width: 400px;
+      min-height: 80%;
+      max-height: max-content;
+      border-radius: 15px;
+      position: relative;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      #modalClose {
+         position: absolute;
+         width: 30px;
+         height: 30px;
+         border-radius: 30px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         background-color: $white;
+         top: -10px;
+         right: -10px;
+         cursor: pointer;
+         z-index: 100;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         i {
+            color: $dim-black;
+         }
+      }
+      h2 {
+         font-size: $subtitle-small;
+      }
+      img {
+         width: 100%;
+         height: 400px;
+         object-fit: cover;
+         object-position: center;
+         margin: $margin20;
+      }
+      table {
+         text-transform: uppercase;
+         font-weight: 400;
+         font-size: $body;
+         text-align: left;
+         width: 90%;
+         margin: auto;
+         * {
+            padding: 0;
+         }
+         th,
+         td {
+            padding: 5px 0;
+         }
+         th {
+            vertical-align: top;
+            width: 30%;
+            font-weight: 700;
+         }
+         td {
+            color: $dim-black;
+         }
+         .feature-list span {
+            margin-right: 10px;
+            color: $silver-black;
+         }
+      }
+   }
+}

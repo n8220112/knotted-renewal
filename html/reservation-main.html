@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>knotted_개인 예약</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="images/icon.png">
+    <!-- iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <aside class="side01">
+            <div class="img">
+                <img src="../images/side-menu-img.png" alt="베스트메뉴이미지">
+            </div>
+            <h2 class="title-small">
+                KNOTTED <br>
+                RESERVATION
+            </h2>
+            <h6 class="body-title">
+                달콤한 한 입에 가득한 행복과 기쁨
+            </h6>
+            <span>
+                노티드 도넛의 시그니처 메뉴로 하루의 활력을 더해보세요. <br>
+                정성스럽게 만든 프리미엄 도넛으로 특별한 순간을 완성하세요.
+            </span>
+            <button><a href="html/reservation-intro.html">예약하기</a></button>
+        </aside>
+        <div class="page-wrapper-main">
+            <div class="header-include"></div>
+            <!-- Main -->
+            <section class="reservation-main-section">
+                <div class="reservation-main-wrap">
+                    <!-- title -->
+                    <div class="main-title">
+                        <h3>Reservation</h3>
+                        <!-- 상단 진행 상태 표시 -->
+                        <div id="status-bar">
+                            <span id="selected-store">매장 선택</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span id="selected-menu">메뉴 선택</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <span id="selected-date">날짜 선택</span>
+                        </div>
+                    </div>
+                    <!-- content -->
+                    <div class="main-content">
+                        <!-- 1단계: 매장 선택 -->
+                        <div id="store-step">
+                            <button class="click-btn" onclick="confirmStore()">확인</button>
+                            <div class="store-card-wrap" id="storeCardWrap"></div>
+                        </div>
+                        <!-- 2단계: 매장 선택 -->
+                        <div id="menu-step">
+                            <!-- 필터링 할 버튼 -->
+                            <div id="category-filter">
+                                <button data-category="all" class="active">전체</button>
+                                <button data-category="donut">도넛</button>
+                                <button data-category="bakery">베이커리</button>
+                                <button data-category="cake">케이크</button>
+                                <button data-category="beverage">음료</button>
+                            </div>
+                            <div class="cart-wrap">
+                                <h4>선택 메뉴</h4>
+                                <div id="menu-cart"></div>
+                            </div>
+                            <button class="click-btn" onclick="confirmMenu()">확인</button>
+                            <div class="menu-card-wrap" id="menuCardWrap"></div>
+                        </div>
+                        <!-- 3단계: 예약 입력 -->
+                        <div id="date-step">
+                            <!-- 날짜 선택 -->
+                            <div class="swiper date-swiper" id="dateSwiper">
+                                <div class="swiper-wrapper"></div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                            <!-- 시간 선택 -->
+                            <div id="time-list"></div>
+                            <!-- 선택된 메뉴 요약 표시 -->
+                            <div id="selected-menu-summary"></div>
+                            <!-- 제출 버튼 -->
+                            <button class="click-btn" onclick="submitReservation()">제출</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer-include"></div>
+            <div class="top-include"></div>
+        </div>
+        <aside class="side02">
+            <div class="img">
+                <img src="../images/side-intro.png" alt="소개문구이미지">
+            </div>
+            <p>
+                달콤한 행복을 전하는
+            </p>
+            <h5>노티드 도넛</h5>
+            <div class="search-input-box">
+                <input type="text" id="sideSearchInput" placeholder="상품명을 입력하세요">
+                <button class="btn-search" id="sideSearchBtn" type="button">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <ul id="results" class="search-suggestions"></ul>
+            <div class="hash-tag-box">
+                <div class="tag tag01">
+                    <div class="tag-text" onclick="enterInput (event,'우유 생크림')"><a href="#"># 우유 생크림</a></div>
+                    <div class="tag-text" onclick="enterInput (event,'수박 화채')"><a href="#"># 수박 화채</a></div>
+                    <div class="tag-text" onclick="enterInput (event,'빙수')"><a href="#"># 빙수</a></div>
+                    
+                </div>
+                <div class="tag tag02">
+                    <div class="tag-text" onclick="enterInput (event,'마스카포네 티라미수')"><a href="#"># 마스카포네 티라미수</a></div>
+                <div class="tag-text" onclick="enterInput (event,'저당 도넛')"><a href="#"># 저당 도넛</a></div>
+                </div>
+            </div>
+            </div>
+        </aside>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- main-swiper -->
+    <script src="../js/include.js"></script>
+    <script src="../js/sub-reservation-main.js"></script>
+    <script src="../js/sub-search.js"></script>
+</body>
+</html>

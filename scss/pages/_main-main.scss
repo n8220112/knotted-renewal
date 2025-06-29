@@ -1,0 +1,32 @@
+main {
+
+    .mainSwiper {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-info {
+        margin: $margin60;
+        text-align: center;
+
+        .img {
+            width: 270px;
+            height: 100px;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        p {
+            margin: $margin20;
+        }
+
+        span.txt {
+            font-size: $txt;
+        }
+    }
+}

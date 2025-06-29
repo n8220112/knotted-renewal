@@ -1,0 +1,57 @@
+.online-shop{
+    margin: $margin60;
+    padding: 0 40px;
+    position: relative;
+    .online-wrap{
+        &::before{
+            content: '';
+            width: 1px; height: 25%;
+            background: $main-black;
+            position: absolute;
+            bottom: 100%;
+            z-index: 10;
+        }
+        .online-content{
+            overflow: hidden;
+            .online-title{
+                h3{
+                    font-size: $subtitle;
+                    margin: $margin40;
+                }
+            }
+            .OnlineShop{
+                overflow: visible;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        width: 220px; height: 300px;
+                        .online-shop-img{
+                            width: 100%; height: 180px;
+                            object-fit: cover;
+                        }
+                        .online-shop-title{
+                            font-size: $body-title;
+                            @include ellipsis(200);
+                            margin: 10px 0 20px;
+                        }
+                        .online-shop-price{
+                            text-align: center;
+                            color: $point-color;
+                        }
+
+                    }
+                }
+                .swiper-scrollbar{
+                    width: 456px; height: 1px;
+                    background: rgba($main-black,.5);
+                    border-radius : 0px;
+                    .swiper-scrollbar-drag{
+                        border-radius : 0px;
+                        height: 4px;
+                        background: $main-black;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
+}

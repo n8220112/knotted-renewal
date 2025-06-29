@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>knotted_이벤트</title>
+    <!-- 파비콘 -->
+    <link rel="icon" href="images/icon.png">
+    <!-- iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <aside class="side01">
+            <div class="img">
+                <img src="../images/side-menu-img.png" alt="베스트메뉴이미지">
+            </div>
+            <h2 class="title-small">
+                KNOTTED <br>
+                RESERVATION
+            </h2>
+            <h6 class="body-title">
+                달콤한 한 입에 가득한 행복과 기쁨
+            </h6>
+            <span>
+                노티드 도넛의 시그니처 메뉴로 하루의 활력을 더해보세요. <br>
+                정성스럽게 만든 프리미엄 도넛으로 특별한 순간을 완성하세요.
+            </span>
+            <button><a href="reservation-intro.html">예약하기</a></button>
+        </aside>
+        <div class="page-wrapper-main">
+
+            <div class="header-include"></div>
+            <!-- Main -->
+            <section class="event-section">
+                <div class="title-view">
+                    <h1>event</h1>
+                    <div class="title-bg">
+                        <img src="../images/event-title-bg.png" alt="">
+                    </div>
+                </div>
+                <div class="inner">
+                    <nav>
+                        <ul>
+                            <li><a href="../html/sub-event.html" class="event">이벤트</a></li>
+                            <li><a href="../html/sub-notice.html">공지사항</a></li>
+                        </ul>
+                    </nav>
+                    <div class="event-contents">
+                        <div class="content-title">이벤트</div>
+                        <div class="content-items" id="itemContainer">
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="footer-include"></div>
+            <div class="top-include"></div>
+        </div>
+        <aside class="side02">
+            <div class="img">
+                <img src="../images/side-intro.png" alt="소개문구이미지">
+            </div>
+            <p>
+                달콤한 행복을 전하는
+            </p>
+            <h5>노티드 도넛</h5>
+            <div class="search-input-box">
+                <input type="text" id="sideSearchInput" placeholder="상품명을 입력하세요">
+                <button class="btn-search" id="sideSearchBtn" type="button">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <ul id="results" class="search-suggestions"></ul>
+            <div class="hash-tag-box">
+                <div class="tag tag01">
+                    <div class="tag-text" onclick="enterInput (event,'우유 생크림')"><a href="#"># 우유 생크림</a></div>
+                    <div class="tag-text" onclick="enterInput (event,'수박 화채')"><a href="#"># 수박 화채</a></div>
+                    <div class="tag-text" onclick="enterInput (event,'빙수')"><a href="#"># 빙수</a></div>
+                    
+                </div>
+                <div class="tag tag02">
+                    <div class="tag-text" onclick="enterInput (event,'마스카포네 티라미수')"><a href="#"># 마스카포네 티라미수</a></div>
+                <div class="tag-text" onclick="enterInput (event,'저당 도넛')"><a href="#"># 저당 도넛</a></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- main-swiper -->
+    <script src="../js/include.js"></script>
+    <script src="../js/sub-event.js"></script>
+    <script src="../js/sub-search.js"></script>
+</body>
+
+</html>

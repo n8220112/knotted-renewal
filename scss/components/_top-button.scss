@@ -1,0 +1,54 @@
+.top-include {
+   position: sticky;
+   cursor: pointer;
+   width: 0;
+   height: 0;
+   bottom: 100px;
+   z-index: 999;
+   perspective: 1000px;
+   margin-left: auto;
+   margin-right: 60px;
+   .top-btn {
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+      bottom: 100px;
+      perspective: 1000px;
+      &:hover > a {
+         transform: rotateY(180deg);
+      }
+
+      .top-btn-inner {
+         width: 45px;
+         height: 45px;
+         display: block;
+         position: relative;
+         transition: all 0.5s;
+         perspective-origin: center;
+         transform-style: preserve-3d;
+
+         .top-btn-front {
+            z-index: 2;
+            backface-visibility: hidden;
+         }
+
+         .top-btn-back {
+            z-index: 1;
+            transform: rotateY(180deg);
+         }
+
+         span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 18px;
+            box-shadow: 0 0 10px #00000009;
+
+            img {
+               width: 100%;
+               height: 100%;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,155 @@
+.brand-section {
+    width: 100%;
+    
+
+    .view-info {
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+
+        .view-info-top {
+            display: flex;
+            width: 100%;
+
+
+            img {
+                width: 50%;
+            }
+        }
+
+        .view-info-bottom {
+            display: flex;
+            width: 100%;
+
+
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .brand-info {
+        padding: 60px 0;
+        position: relative;
+
+        .menu-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .menu-wrap {
+                width: 80%;
+                height: 150px;
+                border-radius: 100px;
+                margin: 10px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px;
+                background-color: rgb(255, 254, 251);
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                p {
+                    font-size: $txt;
+                    color: $dim-black;
+                }
+            }
+        }
+
+        .brand-intro {
+            text-align: center;
+            padding-top: 60px;
+            font-size: $txt;
+            font-weight: 600;
+            color: $dim-black;
+            transform: translateY(60px);
+        }
+
+        width: 100%;
+        height: max-content;
+        background-color: $white;
+        .object{
+            animation: rotateInfinitely 10s linear infinite;
+            @keyframes rotateInfinitely {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+        }
+        .object-img01 {
+            position: absolute;
+            top: 10%;
+            left: 6%;
+            width: 40px;
+            height: 40px;
+           
+            img {
+                width: 100%;
+                height: 100%;
+            }
+           
+        }
+
+        .object-img02 {
+            
+            position: absolute;
+            top: 76%;
+left: 78%;
+            width: 35px;
+            height: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .object-img03 {
+            position: absolute;
+            top: 55%;
+left: 3.125%;
+            width: 40px;
+            height: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .object-img04 {
+            position: absolute;
+
+            top: 29.25%;
+left: 83.4375%;
+            width: 30px;
+            height: 30px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .brand-img {
+        transform: translateY(90px);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        width: 100%;
+        height: 350px;
+    }
+}

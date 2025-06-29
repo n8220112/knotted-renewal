@@ -1,0 +1,170 @@
+.menulist-section {
+   margin: $margin40;
+   .menulist-title {
+      text-align: center;
+      color: $point-color;
+      .subtitle {
+         font-size: $subtitle;
+         color: $point-color;
+      }
+   }
+   .menulist-btnwrap {
+      margin: $margin20;
+      padding: $padding20;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      a {
+         display: block;
+         text-transform: uppercase;
+         font-family: $primary-en;
+      }
+      .menulist-filters {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         a {
+            flex: 1;
+            font-size: $body;
+            font-weight: 500;
+            color: $dark-gray;
+            padding: 3px;
+            &.active {
+               border-radius: 20px;
+               border: 1px solid $dark-gray;
+               color: $dim-black;
+               font-weight: 700;
+            }
+         }
+      }
+      .menulist-subfilters {
+         width: 70%;
+         margin: auto;
+         display: none;
+         justify-content: space-between;
+         align-items: center;
+         a {
+            font-size: $txt;
+            font-weight: 500;
+            color: $dark-gray;
+            padding: 5px;
+            &.active {
+               color: $dim-black;
+               font-weight: 700;
+            }
+         }
+      }
+      .menulist-search {
+         margin: $margin20;
+         #menuSearch {
+            width: 85%;
+            border: 1px solid $dark-gray;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: $body;
+            &::placeholder {
+               padding-left: 5px;
+               font-size: $body;
+            }
+            /* X 버튼 및 검색 결과 버튼 숨기기 */
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button {
+               display: none;
+            }
+         }
+      }
+   }
+   .menulist-wrap {
+      padding: $padding20;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 15px;
+      .menu-card {
+         padding: 5px;
+         text-align: center;
+         display: block;
+         > div {
+            img {
+               width: 100%;
+            }
+         }
+         h4 {
+            font-size: $body;
+            font-weight: 400;
+            color: $dim-black;
+         }
+      }
+   }
+}
+
+#menuModal {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+   z-index: 99999;
+   .modal-inner {
+      background: #fff;
+      padding: 40px 0;
+      height: 80%;
+      max-height: max-content;
+      width: 400px;
+      border-radius: 15px;
+      position: relative;
+      text-align: center;
+      #modalClose {
+         position: absolute;
+         width: 30px;
+         height: 30px;
+         border-radius: 30px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         background-color: $white;
+         top: -10px;
+         right: -10px;
+         cursor: pointer;
+         z-index: 100;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         i {
+            color: $dim-black;
+         }
+      }
+      h2 {
+         font-size: $subtitle-small;
+      }
+      h5 {
+         text-transform: uppercase;
+         font-family: $primary-en;
+         font-weight: 400;
+         color: $light-black;
+         font-size: $body-title;
+         padding-bottom: 20px;
+         border-bottom: 1px solid $silver-gray;
+      }
+      p {
+         padding: $padding20;
+         text-align: left;
+         color: $light-black;
+         font-size: $body;
+         line-height: 200%;
+         &.modalAllergens {
+            font-weight: 700;
+            color: $dim-black;
+            margin-top: 20px;
+         }
+      }
+      img {
+         width: 80%;
+      }
+   }
+}
