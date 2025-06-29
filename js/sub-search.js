@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function goToSearchPage() {
     const keyword = input.value.trim();
     if (keyword) {
-      window.location.href = `/Knotted/html/sub-search.html?keyword=${encodeURIComponent(keyword)}`;
+      window.location.href = `/knotted-renewal/html/sub-search.html?keyword=${encodeURIComponent(keyword)}`;
     }
   }
 
