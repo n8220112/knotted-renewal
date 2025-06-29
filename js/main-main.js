@@ -12,42 +12,42 @@ const newMenus = [
   {
   "title": "초당 옥수수 크림 도넛",
   "category": "도넛",
-  "imageUrl": "/Knotted/images/new-menu01.png"
+  "imageUrl": "/knotted-renewal/images/new-menu01.png"
   },
   {
   "title": "메론 크림 도넛",
   "category": "도넛",
-  "imageUrl": "/Knotted/images/new-menu02.png"
+  "imageUrl": "/knotted-renewal/images/new-menu02.png"
   },
   {
   "title": "민트 초코 크림 도넛",
   "category": "도넛",
-  "imageUrl": "/Knotted/images/new-menu03.png"
+  "imageUrl": "/knotted-renewal/images/new-menu03.png"
   },
   {
   "title": "스마일 보스톤 크림 도넛",
   "category": "도넛",
-  "imageUrl": "/Knotted/images/new-menu04.png"
+  "imageUrl": "/knotted-renewal/images/new-menu04.png"
   },
   {
   "title": "수박 주스",
   "category": "음료",
-  "imageUrl": "/Knotted/images/new-menu06.png"
+  "imageUrl": "/knotted-renewal/images/new-menu06.png"
   },
   {
   "title": "수박 화채",
   "category": "음료",
-  "imageUrl": "/Knotted/images/new-menu07.png"
+  "imageUrl": "/knotted-renewal/images/new-menu07.png"
   },
   {
   "title": "망고 애플티 에이드",
   "category": "음료",
-  "imageUrl": "/Knotted/images/new-menu08.png"
+  "imageUrl": "/knotted-renewal/images/new-menu08.png"
   },
   {
   "title": "통통 단팥 우유 빙수",
   "category": "디저트",
-  "imageUrl": "/Knotted/images/new-menu09.png"
+  "imageUrl": "/knotted-renewal/images/new-menu09.png"
   }
 ]
 
@@ -57,7 +57,7 @@ newMenus.forEach(menu => {
   let menuSlide = document.createElement('div');
   menuSlide.className = "swiper-slide";
   menuSlide.innerHTML = `
-  <a href="/Knotted/html/sub-menulist.html">
+  <a href="/knotted-renewal/html/sub-menulist.html">
       <img src=${menu.imageUrl} alt="상품 이미지">
   </a>
   `;
@@ -223,7 +223,7 @@ if (item.soldOut) return; //sold out 정보는 안보이게
 let itemPrice = item.price.toLocaleString(); //금액 단위 구분
   shopSlide.className = "swiper-slide";
   shopSlide.innerHTML = `
-  <a href = "/Knotted/html/sub-onlineshop.html">
+  <a href = "/knotted-renewal/html/sub-onlineshop.html">
   <img src=${item.image} alt="상품이미지" class="online-shop-img"/>
   <div class="online-shop-title">${item.name}</div>
   <p class="online-shop-price">${itemPrice}원</p>
@@ -247,31 +247,31 @@ const notices = [
       id: 5,
       title: "노티드 2025 설 휴무 매장 안내",
       date: "2025-01-26",
-      link: "/Knotted/html/sub-notice.html"
+      link: "/knotted-renewal/html/sub-notice.html"
   },
   {
       id: 4,
       title: "노티드 2024 추석 휴무 매장 안내",
       date: "2024-09-09",
-      link: "/Knotted/html/sub-notice.html"
+      link: "/knotted-renewal/html/sub-notice.html"
   },
   {
       id: 3,
       title: "노티드 2024 설 휴무 매장 안내",
       date: "2024-02-01",
-      link: "/Knotted/html/sub-notice.html"
+      link: "/knotted-renewal/html/sub-notice.html"
   },
   {
       id: 2,
       title: "구)노티드오더 포인트 및 쿠폰 이관 안내 공지",
       date: "2023-12-15",
-      link: "/Knotted/html/sub-notice.html"
+      link: "/knotted-renewal/html/sub-notice.html"
   },
   {
       id: 1,
       title: "노티드 예약페이지 오픈 안내",
       date: "2023-10-24",
-      link: "/Knotted/html/sub-notice.html"
+      link: "/knotted-renewal/html/sub-notice.html"
   }
 ];
 
